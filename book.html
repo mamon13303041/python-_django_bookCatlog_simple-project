@@ -1,0 +1,43 @@
+
+
+{% load bootstrap %}
+
+
+
+
+<body>
+    {% block content %}
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h1 class="mt-2">Book catlog</h1>
+                <hr class="mt-0 mb-4">
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form|bootstrap_horizontal:'col-lg-4'  }}
+
+                    <br>
+
+                    <input type="submit"  class="btn btn-primary" name="Submit">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}
+</body>
+
+<style>
+    
+    body {
+        color: #566787;
+        background: #f5f5f5;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 13px;
+    }
+</style>
